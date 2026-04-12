@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BanglaBazar 24/7 </title>
+    
+    <!-- link part starts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="./assets/css/responsive.css">
+<link rel="stylesheet" href="./assets/css/style.css">
+    <!-- link part ends -->
+</head>
+<body>
+    
+    <!-- header part starts here -->
+ <header>
+    <!-- nav bar starts -->
+<section id="navigation">
+        <!-- ════════════════════════════════════════
+     TOP BAR
+════════════════════════════════════════ -->
+<div class="topbar d-none d-md-block">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <i class="bi bi-geo-alt-fill text-success me-1"></i>
+        Store Location: Lincoln- 344, Illinois, Chicago, USA
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <a href="#">Eng <i class="bi bi-chevron-down" style="font-size:11px"></i></a>
+        <span class="sep">|</span>
+        <a href="#">USD <i class="bi bi-chevron-down" style="font-size:11px"></i></a>
+        <span class="sep">|</span>
+        <a href="#"><i class="bi bi-person me-1"></i>Sign In / Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- ════════════════════════════════════════
+     MIDDLE BAR
+════════════════════════════════════════ -->
+<div class="middlebar d-flex align-items-center justify-content-between">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between gap-3">
+ 
+      <!-- Logo -->
+      <a href="#" class="logo-slot">
+        <img src="./assets/image/Logo.png" height="35" alt="logo">
+        <!-- Replace above div with <img src="your-logo.png" height="42"> -->
+      </a>
+      <div class="d-lg-none ms-auto">   <!-- এখানে ms-auto যোগ করো -->
+        <button class="navbar-toggler-custom" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#mobileNav">
+            <i class="bi bi-list"></i>
+        </button>
+    </div>
+ 
+      <!-- Search (lg+ only) -->
+      <div class="search-wrap flex-grow-1 mx-3">
+        <input type="text" placeholder="Search for products..."/>
+        <button><i class="bi bi-search me-1"></i>Search</button>
+      </div>
+ 
+      <!-- Icons -->
+      <div class="d-flex d-none d-lg-block align-items-center gap-1">
+        <button class="icon-btn">
+          <i class="bi bi-heart"></i>
+        </button>
+        <button class="icon-btn">
+          <i class="bi bi-bag"></i>
+          <span class="badge-dot">3</span>
+        </button>
+        <div class="d-none d-md-flex flex-column ms-1">
+          <span class="cart-label">Shopping cart:</span>
+          <span class="cart-price">$57.00</span>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+ 
+<!-- ════════════════════════════════════════
+     MAIN NAVBAR (desktop)
+════════════════════════════════════════ -->
+<nav class="main-navbar">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+ 
+      <!-- Desktop nav links -->
+      <ul class="nav d-none d-lg-flex">
+ 
+        <li class="nav-item dropdown">
+          <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-house-door-fill me-1"></i> Home
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-layout-text-window"></i>Homepage v1</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-layout-text-window-reverse"></i>Homepage v2</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-grid-1x2"></i>Homepage v3</a></li>
+          </ul>
+        </li>
+ 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-shop me-1"></i> Shop
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-grid"></i>All Products</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-flower1"></i>Vegetables</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-egg-fried"></i>Dairy & Eggs</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-basket"></i>Fresh Fruits</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-cup-straw"></i>Beverages</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-tag"></i>On Sale</a></li>
+          </ul>
+        </li>
+ 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-file-earmark-text me-1"></i> Pages
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>About Us</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle"></i>FAQ</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-envelope"></i>Contact</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-shield-check"></i>Privacy Policy</a></li>
+          </ul>
+        </li>
+ 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-pencil-square me-1"></i> Blog
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text"></i>Blog Grid</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-list-ul"></i>Blog List</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-file-post"></i>Single Post</a></li>
+          </ul>
+        </li>
+ 
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-info-circle me-1"></i> About Us</a>
+        </li>
+ 
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-telephone me-1"></i> Contact Us</a>
+        </li>
+      </ul>
+ 
+      <!-- Phone (desktop) -->
+      <div class="nav-phone d-none d-lg-flex">
+        <i class="bi bi-telephone-fill"></i>
+        (219) 555-0114
+      </div>
+ 
+      <!-- Hamburger (mobile/tablet) -->
+      
+ 
+    </div>
+  </div>
+</nav>
+ 
+<!-- ════════════════════════════════════════
+     OFFCANVAS (mobile sidebar)
+════════════════════════════════════════ -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNav">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">
+      <i class="bi bi-leaf-fill me-2"></i>Ecobazar Menu
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+ 
+    <!-- Mobile search -->
+    <div class="p-3 border-bottom">
+      <div class="d-flex">
+        <input type="text" class="form-control" placeholder="Search products..."/>
+        <button class="btn ms-2" style="background:var(--green);color:#fff;">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+ 
+    <nav class="d-flex flex-column">
+ 
+      <!-- Home -->
+      <a class="nav-link" data-bs-toggle="collapse" href="#mob-home">
+        <span><i class="bi bi-house-door-fill me-2 text-success"></i>Home</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <div class="collapse" id="mob-home">
+        <a class="dropdown-item" href="#">Homepage v1</a>
+        <a class="dropdown-item" href="#">Homepage v2</a>
+        <a class="dropdown-item" href="#">Homepage v3</a>
+      </div>
+ 
+      <!-- Shop -->
+      <a class="nav-link" data-bs-toggle="collapse" href="#mob-shop">
+        <span><i class="bi bi-shop me-2 text-success"></i>Shop</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <div class="collapse" id="mob-shop">
+        <a class="dropdown-item" href="#">All Products</a>
+        <a class="dropdown-item" href="#">Vegetables</a>
+        <a class="dropdown-item" href="#">Dairy & Eggs</a>
+        <a class="dropdown-item" href="#">Fresh Fruits</a>
+        <a class="dropdown-item" href="#">Beverages</a>
+        <a class="dropdown-item" href="#">On Sale</a>
+      </div>
+ 
+      <!-- Pages -->
+      <a class="nav-link" data-bs-toggle="collapse" href="#mob-pages">
+        <span><i class="bi bi-file-earmark-text me-2 text-success"></i>Pages</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <div class="collapse" id="mob-pages">
+        <a class="dropdown-item" href="#">About Us</a>
+        <a class="dropdown-item" href="#">FAQ</a>
+        <a class="dropdown-item" href="#">Contact</a>
+        <a class="dropdown-item" href="#">Privacy Policy</a>
+      </div>
+ 
+      <!-- Blog -->
+      <a class="nav-link" data-bs-toggle="collapse" href="#mob-blog">
+        <span><i class="bi bi-pencil-square me-2 text-success"></i>Blog</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <div class="collapse" id="mob-blog">
+        <a class="dropdown-item" href="#">Blog Grid</a>
+        <a class="dropdown-item" href="#">Blog List</a>
+        <a class="dropdown-item" href="#">Single Post</a>
+      </div>
+ 
+      <a class="nav-link" href="#">
+        <span><i class="bi bi-info-circle me-2 text-success"></i>About Us</span>
+      </a>
+ 
+      <a class="nav-link" href="#">
+        <span><i class="bi bi-telephone me-2 text-success"></i>Contact Us</span>
+      </a>
+ 
+    </nav>
+ 
+    <!-- Phone bottom -->
+    <div class="offcanvas-phone">
+      <i class="bi bi-telephone-fill"></i> (219) 555-0114
+    </div>
+ 
+  </div>
+</div>
+</section>
+
+    <!-- nav bar ends  -->
+ </header>
+
+    <!-- header part ends here -->
+
+
+
+<!-- javascript link  -->
+    <script src="./assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+    <!-- javascripts link ends -->
+</body>
+</html>
