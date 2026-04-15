@@ -2,6 +2,10 @@
   .search-wrap{
     display:none;
   }
+   #discountBanner .discountBnr{
+    width: 100%;
+    height: 200px;
+   }
 }
 @media (max-width: 768px) {
   .main-slider {
@@ -9,8 +13,8 @@
   }
 
   .main-slider img {
-    width: 100%;
-    height: 200px;
+    max-width: 80%;
+    height: 150px;
   }
    .features-bar{
     padding:10px 5px;
