@@ -84,44 +84,87 @@ $(document).ready(function(){
 $(function(){
 
 const track = $('.slider-track')
-const card = $('.slider-product')
+let card = $('.slider-product')
+
+/* clone cards for infinite */
+track.append(card.clone())
+
+card = $('.slider-product')
+
 let index = 0
+let slideInterval
 
 function cardWidth(){
 return card.outerWidth(true)
 }
 
-function move(){
-track.css('transform','translateX(-'+ index*cardWidth() +'px)')
+function visible(){
+let w = $(window).width()
+
+if(w < 768) return 2
+if(w < 1024) return 3
+return 5
 }
 
-$('.next').click(function(){
+function move(){
+track.css('transform','translateX(-'+ index * cardWidth() +'px)')
+}
 
-if(index < card.length - visible())
+function nextSlide(){
+
 index++
-
 move()
 
+if(index >= card.length/2){
+
+setTimeout(function(){
+
+track.css('transition','none')
+index = 0
+move()
+
+setTimeout(function(){
+track.css('transition','transform .6s ease')
+},50)
+
+},600)
+
+}
+
+}
+
+function prevSlide(){
+
+if(index <= 0){
+index = card.length/2
+track.css('transition','none')
+move()
+
+setTimeout(function(){
+track.css('transition','transform .6s ease')
+},50)
+}
+
+index--
+move()
+
+}
+
+/* BUTTON CONTROL */
+
+$('.next').click(function(){
+nextSlide()
 })
 
 $('.prev').click(function(){
-
-if(index>0)
-index--
-
-move()
-
+prevSlide()
 })
 
-function visible(){
+/* AUTO SLIDE */
 
-let w = $(window).width()
+slideInterval = setInterval(nextSlide,2500)
 
-if(w<768) return 2
-if(w<1024) return 3
-return 5
-
-}
+/* RESIZE */
 
 $(window).resize(function(){
 move()
@@ -129,4 +172,41 @@ move()
 
 })
 
+
   // end of tranding slider js
+
+  // feedback starts
+  $('.testimonial-slider').owlCarousel({
+loop:true,
+margin:20,
+autoplay:true,
+autoplayTimeout:2000,
+autoplayHoverPause:false,
+dots:false,
+nav:false,
+
+smartSpeed:800,        
+autoplaySpeed:800, 
+
+responsive:{
+0:{items:1},
+768:{items:2},
+992:{items:3}
+}
+});
+// feedback ends
+// footer js starts
+// Intersection Observer for scroll-triggered animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+      }
+    });
+  }, { threshold: 0.15 });
+ 
+  document.querySelectorAll('.anim-fade-up, .anim-fade-in').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+// footer js starts

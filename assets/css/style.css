@@ -1127,3 +1127,377 @@ color:#fff;
 .slider-product{flex:0 0 calc(50% - 8px);}
 }
 /* tranding parts ends here */
+
+/* feedback part starts */
+#feedback .section-title{
+font-weight:700;
+font-size:32px;
+margin-bottom:40px;
+}
+
+#feedback .testimonial-card{
+background:rgba(235, 234, 234, 0.979);
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+height:100%;
+}
+
+#feedback .quote{
+font-size:40px;
+color:#86c49a;
+}
+
+#feedback .testimonial-text{
+color:#666;
+font-size:15px;
+margin-bottom:20px;
+}
+
+#feedback .client-info{
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+#feedback .client-left{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+#feedback .client-img{
+width:50px;
+height:50px;
+border-radius:50%;
+object-fit:cover;
+}
+
+ #feedback .client-name{
+font-weight:600;
+margin:0;
+}
+
+#feedback .client-role{
+font-size:13px;
+color:#999;
+margin:0;
+}
+
+#feedback .stars{
+color:#ff8a00;
+}
+/* feedback part ends */
+
+/* footer css starts */
+ /* ── Newsletter Section ── */
+    .newsletter-section {
+      background: #f9fafb;
+      padding: 52px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+ 
+    .newsletter-section h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+ 
+    .newsletter-section p {
+      font-size: 0.92rem;
+      color: #6b7280;
+      line-height: 1.6;
+      max-width: 380px;
+    }
+ 
+    .newsletter-form {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+ 
+    .newsletter-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 13px 20px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 50px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.25s ease;
+      background: #fff;
+    }
+ 
+    .newsletter-form input:focus {
+      border-color: var(--green);
+    }
+ 
+    .newsletter-form input::placeholder { color: #aaa; }
+ 
+    .btn-subscribe {
+      background: var(--green);
+      color: #fff;
+      border: none;
+      padding: 13px 30px;
+      border-radius: 50px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+      white-space: nowrap;
+    }
+ 
+    .btn-subscribe:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(34,197,94,0.35);
+    }
+ 
+    .btn-subscribe:active { transform: translateY(0); }
+ 
+    /* Social icons */
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+ 
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+ 
+    .social-icon:hover {
+      background: var(--green);
+      border-color: var(--green);
+      color: #fff;
+    }
+ 
+    /* ── Main Footer ── */
+    .main-footer {
+      background: #0e0d0df5;
+      padding: 60px 0 0;
+    }
+ 
+    .footer-brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      text-decoration: none;
+    }
+ 
+    /* Logo placeholder — user will replace */
+    
+    .footer-desc {
+      font-size: 0.875rem;
+      color: var(--topbar-bg);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      max-width: 280px;
+    }
+ 
+    .footer-contact a {
+      color: var(--topbar-bg);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-bottom: 2px solid var(--green);
+      padding-bottom: 1px;
+      transition: color 0.2s;
+    }
+ 
+    .footer-contact a:hover { color: var(--green); }
+ 
+    .footer-contact .separator {
+      color: var(--topbar-bg);
+      margin: 0 10px;
+      font-size: 0.85rem;
+    }
+ 
+    /* Footer columns */
+    .footer-col-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 22px;
+      position: relative;
+    }
+ 
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+ 
+    .footer-links li {
+      margin-bottom: 13px;
+    }
+ 
+    .footer-links a {
+      color: var(--topbar-bg);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.22s ease, padding-left 0.22s ease;
+      display: inline-block;
+    }
+ 
+    .footer-links a:hover {
+      color: var(--green);
+      padding-left: 4px;
+    }
+ 
+    .footer-links a.active {
+      color: #fff;
+      font-weight: 600;
+    }
+ 
+    /* Divider */
+    .footer-divider {
+      border-color: var(--border-color);
+      margin: 40px 0 0;
+    }
+ 
+    /* Bottom bar */
+    .footer-bottom {
+      background: var(--dark-bg);
+      padding: 20px 0;
+      border-top: 1px solid var(--border-color);
+    }
+ 
+    .footer-bottom p {
+      font-size: 0.83rem;
+      color: var(--topbar-bg);
+      margin: 0;
+    }
+ 
+    .payment-icons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+ 
+    .payment-badge {
+      background: #fff;
+      border-radius: 5px;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #111;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: transform 0.2s ease;
+    }
+ 
+    .payment-badge:hover { transform: translateY(-2px); }
+ 
+    .payment-badge.apple { background: #111; color: #fff; }
+    .payment-badge.visa { background: #1434CB; color: #fff; }
+    .payment-badge.discover { background: #e65c00; color: #fff; }
+    .payment-badge.mastercard { background: #fff; }
+    .payment-badge.secure { background: #f3f4f6; color: #374151; font-size: 0.65rem; }
+ 
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+ 
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+ 
+    .anim-fade-up {
+      opacity: 0;
+      animation: fadeUp 0.55s ease forwards;
+    }
+ 
+    .anim-fade-in {
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards;
+    }
+ 
+    .d1 { animation-delay: 0.05s; }
+    .d2 { animation-delay: 0.12s; }
+    .d3 { animation-delay: 0.2s; }
+    .d4 { animation-delay: 0.28s; }
+    .d5 { animation-delay: 0.36s; }
+    .d6 { animation-delay: 0.44s; }
+ 
+    /* Responsive tweaks */
+    @media (max-width: 767px) {
+      .newsletter-right {
+        margin-top: 24px;
+      }
+      .newsletter-form { flex-direction: column; align-items: stretch; }
+      .btn-subscribe { width: 100%; text-align: center; }
+      .social-icons { justify-content: flex-start; margin-top: 16px; }
+      .payment-icons { justify-content: flex-start; margin-top: 12px; }
+      .footer-bottom p { text-align: center; }
+    }
+
+    .mySign span  a {
+  display: inline-block;
+  padding: 5px;
+  background: linear-gradient(135deg, #1ba14c, #22c55e);
+  color: white;
+  text-decoration: none;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  top: 10px;
+}
+
+/* Hover Effect */
+.mySign span a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 30px rgba(28, 180, 54, 0.644);
+  background: linear-gradient(135deg, #1ba14c, #22c55e);
+}
+
+/* Active/Click Effect */
+.mySign span a:active {
+  transform: scale(0.95);
+}
+
+/* Nice shine effect */
+.mySign span a::before {
+  content: '';
+  position: absolute;
+  top: -70%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.7s;
+}
+
+.mySign span a:hover::before {
+  left: 200%;
+}
+/* footer css starts */
