@@ -222,34 +222,6 @@ body{
       background: rgba(0,0,0,.1);
     }
  
-    /* Dropdown */
-    .main-navbar .dropdown-menu {
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.12);
-      padding: 8px 0;
-      min-width: 200px;
-      animation: fadeDown .2s ease;
-    }
-
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-8px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .main-navbar .dropdown-item {
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--text-dark);
-      padding: 9px 20px;
-      transition: background .15s, color .15s, padding-left .15s;
-    }
-    .main-navbar .dropdown-item:hover {
-      background: var(--green-light);
-      color: var(--green);
-      padding-left: 26px;
-    }
-    .main-navbar .dropdown-item i { margin-right: 8px; font-size: 14px; }
- 
     /* Phone on right */
     .nav-phone{
       color: #fff;
@@ -303,20 +275,6 @@ body{
     .offcanvas-body .nav-link:hover { background: var(--green-light); color: var(--green) !important; }
     .offcanvas-body .nav-link i.arrow { transition: transform .25s; }
     .offcanvas-body .nav-link[aria-expanded="true"] i.arrow { transform: rotate(180deg); }
- 
-    .offcanvas-body .collapse .dropdown-item {
-      padding: 10px 36px;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--text-mid);
-      border-bottom: 1px solid #f0f0f0;
-      transition: background .15s, color .15s, padding-left .15s;
-    }
-    .offcanvas-body .collapse .dropdown-item:hover {
-      background: var(--green-light);
-      color: var(--green);
-      padding-left: 44px;
-    }
  
     /* Offcanvas phone */
     .offcanvas-phone {

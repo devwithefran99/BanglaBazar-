@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
     setTimeout(() => {
       preloader.style.display = 'none';
     }, 800);
-  }, 1500);   // এখানে সময় চেঞ্জ করতে পারো
+  }, 1000);   // এখানে সময় চেঞ্জ করতে পারো
 });
 // preloader js ends
 
