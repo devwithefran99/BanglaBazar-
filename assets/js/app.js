@@ -2,15 +2,16 @@
 window.addEventListener('load', function() {
   const preloader = document.getElementById('preloader');
   
-  // ১-২ সেকেন্ড পর অথবা পুরোপুরি লোড হলে লুকাবে
+  // ১ সেকেন্ড পর preloader hide করবে (তুমি চাইলে সময় বাড়াতে বা কমাতে পারো)
   setTimeout(() => {
-    preloader.style.opacity = '0';
+    preloader.classList.add('fade-out');   // ← এটা আমার CSS এর class
     
-    // অ্যানিমেশন শেষ হলে পুরোপুরি remove
+    // অ্যানিমেশন শেষ হলে DOM থেকে সরিয়ে ফেলবে (performance ভালো থাকবে)
     setTimeout(() => {
       preloader.style.display = 'none';
+      preloader.remove();        // optional - পুরোপুরি remove
     }, 800);
-  }, 1000);   // এখানে সময় চেঞ্জ করতে পারো
+  }, 1200);   // 1200ms = 1.2 সেকেন্ড (সুন্দর লাগে)
 });
 // preloader js ends
 
@@ -26,6 +27,14 @@ document.querySelectorAll('.main-navbar .nav-item').forEach((el, i) => {
   });
 
 //   nav bar js ends
+
+// dropdown submenu 
+document.querySelectorAll('.mobile-toggle').forEach(item => {
+    item.addEventListener('click', function () {
+      this.parentElement.classList.toggle('active');
+    });
+  });
+// dropdown submenu ends
 
 // hero js down
 $(document).ready(function(){
