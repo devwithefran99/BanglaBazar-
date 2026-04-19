@@ -246,9 +246,10 @@ body{
     .cart-price { font-size: 14px; font-weight: 800; color: var(--text-dark); }
  
     /* ── NAVBAR ───────────────────────────────────── */
-    .main-navbar {
+     .main-navbar {
       background: var(--green);
       padding: 0;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
  
     /* Nav links */
@@ -449,7 +450,7 @@ body{
  /* ── Section wrapper ── */
     .about-section {
       padding: 60px 0;
-     border-radius: 0%;
+     border-radius: 5px;
     }
  
     /* ── Left text column ── */
@@ -1462,7 +1463,7 @@ color:#ff8a00;
  
 /* ── Team Card ── */
 .team-card {
-  /* margin: 10px 12px 20px; */
+  margin: 10px 2px 20px;
   border-radius: 20px;
   overflow: hidden;
   background: #fff;

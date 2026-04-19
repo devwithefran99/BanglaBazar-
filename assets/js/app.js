@@ -26,6 +26,8 @@ document.querySelectorAll('.main-navbar .nav-item').forEach((el, i) => {
     }, 50);
   });
 
+
+  
 //   nav bar js ends
 
 // dropdown submenu 
