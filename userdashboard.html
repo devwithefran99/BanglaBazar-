@@ -38,14 +38,12 @@
     <div class="d-flex justify-content-between align-items-center">
       <div>
         <i class="bi bi-geo-alt-fill text-success me-1"></i>
-        Store Location: Lincoln- 344, Illinois, Chicago, USA
+         Store Location: 5th Floor,Kazi Complex,Beparipara,Agrabad Access Road,Chattogram
       </div>
       <div class="d-flex align-items-center gap-2">
-        <a href="#">Eng <i class="bi bi-chevron-down" style="font-size:11px"></i></a>
         <span class="sep">|</span>
-        <a href="#">USD <i class="bi bi-chevron-down" style="font-size:11px"></i></a>
-        <span class="sep">|</span>
-        <a href="#"><i class="bi bi-person me-1"></i>Sign In / Sign Up</a>
+        <a href="signIn.html"><i class="bi bi-person me-1"></i>Sign In /</a>
+        <a href="createAccount.html"><i class="bi bi-person me-1"></i>Sign Up</a>
       </div>
     </div>
   </div>
@@ -77,14 +75,15 @@
       </div>
  
       <!-- Icons -->
-      <div class="d-flex d-none d-lg-block align-items-center gap-1">
-        <button class="icon-btn">
+      <div class="d-none d-lg-flex align-items-center gap-2">
+        <a href="wishlist.html" class="icon-btn">
           <i class="bi bi-heart"></i>
-        </button>
-        <button class="icon-btn">
+          <span class="badge-dot">3</span>
+        </a>
+        <a href="#" class="icon-btn cart-btn ">
           <i class="bi bi-bag"></i>
           <span class="badge-dot">3</span>
-        </button>
+        </a>
       </div>
  
     </div>
@@ -119,11 +118,11 @@
   </a>
   <ul class="submenu">
     <li><a href="wishlist.html">Wishlist</a></li>
-    <li><a href="#">Order History</a></li>
+     <li><a href="userdashboard.html">Order History</a></li>
     <li><a href="singleProduct.html">CheckOut</a></li>
      <li><a href="signIn.html">Sign In</a></li>
    <li><a href="createAccount.html">Sign Up</a></li>
-    <li><a href="#">FAQS</a></li>
+     <li><a href="faq.html">FAQS</a></li>
       <li><a href="userdashboard.html">My Account</a></li>
   </ul>
 </li>
@@ -201,11 +200,11 @@
 
   <ul class="mobile-submenu">
      <li><a href="wishlist.html">Wishlist</a></li>
-    <li><a href="#">Order History</a></li>
+     <li><a href="userdashboard.html">Order History</a></li>
     <li><a href="singleProduct.html">CheckOut</a></li>
      <li><a href="signIn.html">Sign In</a></li>
    <li><a href="createAccount.html">Sign Up</a></li>
-    <li><a href="#">FAQS</a></li>
+     <li><a href="faq.html">FAQS</a></li>
       <li><a href="userdashboard.html">My Account</a></li>
   </ul>
 </div>
@@ -232,148 +231,114 @@
     <!-- nav bar ends  -->
  </header>
 <!-- main content starts here -->
-<main>
-    <section>
-        <div class="container">
-           <div class="d-flex">
-
-    <!-- ==================== BOOTSTRAP OFFCANVAS SIDEBAR ==================== -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="dashboardSidebar" aria-labelledby="dashboardSidebarLabel">
-        <div class="offcanvas-header border-bottom">
-            <div class="d-flex align-items-center gap-3">
-                <div class="bg-success text-white d-flex align-items-center justify-content-center rounded-3 fs-3" 
-                     style="width: 48px; height: 48px;">🔥</div>
-                <h1 class="logo-font fs-2 mb-0 text-success">ERFAN</h1>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body p-0">
-            <div class="py-4">
-                <a href="#" class="d-block px-4 py-3 text-decoration-none text-dark fw-medium active">
-                    <i class="fa-solid fa-house me-3"></i> Dashboard
-                </a>
-                <a href="#" class="d-block px-4 py-3 text-decoration-none text-dark fw-medium">
-                    <i class="fa-solid fa-heart me-3"></i> Wishlist
-                </a>
-                <a href="#" class="d-block px-4 py-3 text-decoration-none text-dark fw-medium">
-                    <i class="fa-solid fa-cart-shopping me-3"></i> Shopping Cart
-                </a>
-            </div>
-
-            <div class="p-4 border-top mt-auto">
-                <div class="d-flex align-items-center gap-3">
-                    <img src="https://i.pravatar.cc/128?img=68" alt="Erfan" 
-                         class="rounded-circle" width="45" height="45" 
-                         style="border: 3px solid var(--green-light);">
-                    <div>
-                        <p class="mb-0 fw-semibold">Erfan</p>
-                        <small class="text-muted">Chattogram</small>
+  <main>
+        <section id="userDash" class="udb-wrap">
+            <div class="container">
+ 
+                <!-- Greeting -->
+                <div class="udb-greeting">
+                    <h2 id="udbGreeting">Good evening, Erfan ✦</h2>
+                    <p>Here's a summary of your account activity</p>
+                </div>
+ 
+                <!-- Stats -->
+                <div class="udb-stats">
+                    <div class="udb-stat">
+                        <div class="udb-stat-label">Orders</div>
+                        <div class="udb-stat-val">47</div>
+                    </div>
+                    <div class="udb-stat">
+                        <div class="udb-stat-label">Spent</div>
+                        <div class="udb-stat-val green">$635</div>
+                    </div>
+                    <div class="udb-stat">
+                        <div class="udb-stat-label">Tier</div>
+                        <div class="udb-stat-val gold">VIP</div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- ================================================================== -->
-
-    <!-- Main Content -->
-    <div class="flex-grow-1 p-3 p-md-4 p-lg-5">
-
-        <!-- Mobile Top Bar -->
-        <div class="d-flex d-md-none align-items-center justify-content-between mb-4">
-            <button class="btn btn-outline-success" data-bs-toggle="offcanvas" data-bs-target="#dashboardSidebar">
-                <i class="fa-solid fa-bars fs-4"></i>
-            </button>
-            <h1 class="logo-font fs-3 mb-0 text-success align-items-center">ERFAN</h1>
-            <!-- <img src="https://i.pravatar.cc/128?img=68" alt="Profile" class="rounded-circle" width="42" height="42"> -->
-        </div>
-
-        <!-- Greeting -->
-        <div class="mb-4 mb-md-5">
-            <h2 class="header-greeting">Good evening, Erfan <span class="text-success">🌿</span></h2>
-            <p class="text-muted fs-6 fs-md-5">Your recent orders at a glance</p>
-        </div>
-
-        <div class="row g-3 g-md-4">
-            <!-- Profile Card -->
-            <div class="col-12 col-lg-7">
-                <div class="custom-card profile-custom-card p-4 p-md-5 sexy-glow">
-                    <div class="row align-items-center g-3 g-md-4">
-                        <div class="col-5 col-sm-4 text-center">
-                            <img src="https://i.pravatar.cc/300?img=68" alt="" 
-                                 class="img-fluid rounded-4" style="max-width: 130px; border: 5px solid white;">
-                        </div>
-                        <div class="col-7 col-sm-8">
-                            <h4 class="fw-bold mb-1">Dianne Russell</h4>
-                            <p class="text-muted small mb-3">VIP • 47 orders</p>
-                            <button onclick="editProfile()" class="btn btn-success btn-sm rounded-4 px-3 py-2">
-                                <i class="fa-solid fa-user-pen me-2"></i> Edit
-                            </button>
+ 
+                <!-- Profile + Billing -->
+                <div class="udb-row">
+ 
+                    <!-- Profile -->
+                    <div class="udb-card udb-profile-card">
+                        <div class="udb-profile-inner">
+                            <div class="udb-avatar">
+                                <img src="https://i.pravatar.cc/300?img=68" alt="Dianne Russell">
+                            </div>
+                            <div class="udb-profile-info">
+                                <h4>Dianne Russell</h4>
+                                <div>
+                                    <span class="udb-vip">
+                                        <i class="bi bi-star-fill"></i> VIP Member
+                                    </span>
+                                </div>
+                                <button class="udb-btn-green" onclick="editProfile()">
+                                    <i class="bi bi-person-pen me-1"></i> Edit Profile
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Billing -->
-            <div class="col-12 col-lg-5">
-                <div class="custom-card p-4 p-md-5 h-100">
-                    <h6 class="text-uppercase small fw-semibold text-muted mb-3">Billing Address</h6>
-                    <p class="fw-medium mb-1">Dianne Russell</p>
-                    <p class="text-muted small mb-3">4540 Parker Rd, Allentown, NM 3834</p>
-                    <button onclick="editAddress()" class="btn btn-outline-secondary btn-sm rounded-4">Edit Address</button>
-                </div>
-            </div>
-
-            <!-- Recent Orders -->
-            <div class="col-12 mt-2">
-                <div class="custom-card p-3 p-md-4 p-lg-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="fw-semibold mb-0">Recent Orders</h5>
-                        <a href="#" onclick="viewAllOrders()" class="text-success small fw-medium text-decoration-none">View All →</a>
+ 
+                    <!-- Billing -->
+                    <div class="udb-card">
+                        <div class="udb-card-label">Billing Address</div>
+                        <div class="udb-billing-name">Dianne Russell</div>
+                        <div class="udb-billing-addr">4540 Parker Rd<br>Allentown, NM 3834</div>
+                        <button class="udb-btn-outline" onclick="editAddress()">
+                            <i class="bi bi-pencil me-1"></i> Edit Address
+                        </button>
                     </div>
-
+ 
+                </div>
+ 
+                <!-- Recent Orders -->
+                <div class="udb-card udb-orders-card">
+                    <div class="udb-orders-head">
+                        <h5>Recent Orders</h5>
+                        <a href="#" class="udb-view-all" onclick="viewAllOrders()">View all →</a>
+                    </div>
                     <div class="table-responsive">
-                        <table class="table table-hover align-middle mb-0">
+                        <table class="udb-table">
                             <thead>
                                 <tr>
-                                    <th>NAME</th>
-                                    <th class="d-none d-sm-table-cell">DATE</th>
-                                    <th>TOTAL</th>
-                                    <th>QTY</th>
-                                    <th>STATUS</th>
+                                    <th>Item</th>
+                                    <th class="udb-hide-mobile">Date</th>
+                                    <th>Total</th>
+                                    <th>Qty</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="fw-medium">Ultimate Tech Bundle</td>
-                                    <td class="text-muted d-none d-sm-table-cell">8 Sep 2020</td>
-                                    <td class="fw-semibold">$135</td>
-                                    <td><span class="quantity-badge">5</span></td>
-                                    <td><span class="px-3 py-1 rounded-pill status-processing">Processing</span></td>
+                                    <td class="td-n">Ultimate Tech Bundle</td>
+                                    <td class="td-d udb-hide-mobile">8 Sep 2020</td>
+                                    <td class="td-p">$135</td>
+                                    <td><span class="udb-qty">5</span></td>
+                                    <td><span class="udb-status udb-s-proc">Processing</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="fw-medium">Executive Workstation</td>
-                                    <td class="text-muted d-none d-sm-table-cell">24 May 2020</td>
-                                    <td class="fw-semibold">$250</td>
-                                    <td><span class="quantity-badge">1</span></td>
-                                    <td><span class="px-3 py-1 rounded-pill status-way">On way</span></td>
+                                    <td class="td-n">Executive Workstation</td>
+                                    <td class="td-d udb-hide-mobile">24 May 2020</td>
+                                    <td class="td-p">$250</td>
+                                    <td><span class="udb-qty">1</span></td>
+                                    <td><span class="udb-status udb-s-way">On Way</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="fw-medium">Audio Mastery Set</td>
-                                    <td class="text-muted d-none d-sm-table-cell">22 Oct 2020</td>
-                                    <td class="fw-semibold">$250</td>
-                                    <td><span class="quantity-badge">4</span></td>
-                                    <td><span class="px-3 py-1 rounded-pill status-completed">Done</span></td>
+                                    <td class="td-n">Audio Mastery Set</td>
+                                    <td class="td-d udb-hide-mobile">22 Oct 2020</td>
+                                    <td class="td-p">$250</td>
+                                    <td><span class="udb-qty">4</span></td>
+                                    <td><span class="udb-status udb-s-done">Done</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
+ 
             </div>
-        </div>
-    </div>
-</div>
-    </section>
-</main>
+        </section>
+    </main>
 <!-- main content end here  -->
 
 
@@ -406,7 +371,7 @@
         <h6 class="footer-col-title">My Account</h6>
         <ul class="footer-links">
            <li><a href="userdashboard.html">My Account</a></li>
-          <li><a href="#">Order History</a></li>
+           <li><a href="userdashboard.html">Order History</a></li>
           <li><a href="#" class="active">Shoping Cart</a></li>
           <li><a href="wishlist.html">Wishlist</a></li>
         </ul>
@@ -416,8 +381,8 @@
       <div class="col-lg-2 col-md-3 col-6 anim-fade-up d3">
         <h6 class="footer-col-title">Helps</h6>
         <ul class="footer-links">
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Faqs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           <li><a href="faq.html">FAQS</a></li>
           <li><a href="#">Terms &amp; Condition</a></li>
           <li><a href="#">Privacy Policy</a></li>
         </ul>
@@ -427,10 +392,10 @@
       <div class="col-lg-2 col-md-3 col-6 anim-fade-up d4">
         <h6 class="footer-col-title">Proxy</h6>
         <ul class="footer-links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Shop</a></li>
+         <li><a href="about us.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
           <li><a href="#">Product</a></li>
-          <li><a href="#">Track Order</a></li>
+          
         </ul>
       </div>
  
@@ -438,10 +403,10 @@
       <div class="col-lg-3 col-md-3 col-6 anim-fade-up d5">
         <h6 class="footer-col-title">Categories</h6>
         <ul class="footer-links">
-          <li><a href="#">Fruit &amp; Vegetables</a></li>
-          <li><a href="#">Meat &amp; Fish</a></li>
-          <li><a href="#">Bread &amp; Bakery</a></li>
-          <li><a href="#">Beauty &amp; Health</a></li>
+          <li><a href="shop.html">Fruit &amp; Vegetables</a></li>
+          <li><a href="shop.html">Meat &amp; Fish</a></li>
+          <li><a href="shop.html">Bread &amp; Bakery</a></li>
+          <li><a href="shop.html">Beauty &amp; Health</a></li>
         </ul>
       </div>
  
@@ -457,21 +422,7 @@
           <p>BanglaBazar24/7 eCommerce © 2026. All Rights Reserved <span>Powered By <a href="https://github.com/devwithefran99">devwithErfan</a></span></p>
         </div>
  
-        <div class="col-md-6">
-          <div class="payment-icons">
-            <span class="payment-badge apple">
-              <i class="fab fa-apple"></i> Pay
-            </span>
-            <span class="payment-badge visa">VISA</span>
-            <span class="payment-badge discover">DISCOVER</span>
-            <span class="payment-badge mastercard">
-              <i class="fa-brands fa-cc-mastercard fa-xl" style="color:#eb001b;"></i>
-            </span>
-            <span class="payment-badge secure">
-              <i class="fas fa-lock" style="color:var(--green);"></i> Secure<br/>Payment
-            </span>
-          </div>
-        </div>
+        
  
       </div>
     </div>

@@ -206,6 +206,103 @@ responsive:{
 }
 });
 // feedback ends
+// add to cart js
+(function () {
+  const drawer  = document.getElementById('cpDrawer');
+  const overlay = document.getElementById('cpOverlay');
+  const closeBtn = document.getElementById('cpClose');
+ 
+  /* open */
+  function cpOpen() {
+    drawer.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+ 
+  /* close */
+  function cpClose() {
+    drawer.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+ 
+  /* ── bind ALL cart trigger elements ── */
+  /* Works with: id="cartTrigger", class="cart-btn", class="icon-btn" containing bi-bag */
+  function bindTriggers() {
+    const selectors = [
+      '#cartTrigger',
+      '.cart-btn',
+      '.icon-btn'
+    ];
+    selectors.forEach(sel => {
+      document.querySelectorAll(sel).forEach(el => {
+        /* only bind icon-btn if it contains a bag icon */
+        if (sel === '.icon-btn' && !el.querySelector('.bi-bag, .bi-bag-fill')) return;
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          cpOpen();
+        });
+      });
+    });
+  }
+ 
+  /* close on overlay click */
+  overlay.addEventListener('click', cpClose);
+  closeBtn.addEventListener('click', cpClose);
+ 
+  /* close on Escape */
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') cpClose(); });
+ 
+  /* remove item */
+  window.cpRemoveItem = function (btn) {
+    const item = btn.closest('.cp-item');
+    item.classList.add('removing');
+    setTimeout(() => {
+      item.remove();
+      cpUpdateState();
+    }, 220);
+  };
+ 
+  /* update count + total + empty state */
+  function cpUpdateState() {
+    const items = document.querySelectorAll('#cpItems .cp-item');
+    const count = items.length;
+ 
+    document.getElementById('cpCount').textContent = count;
+    document.getElementById('cpProductCount').textContent = count + ' Product';
+ 
+    /* recalc total from meta text (format: "X kg × $Y.00") */
+    let total = 0;
+    items.forEach(item => {
+      const meta = item.querySelector('.cp-item-meta strong');
+      if (meta) {
+        const val = parseFloat(meta.textContent.replace('$', ''));
+        if (!isNaN(val)) total += val;
+      }
+    });
+    document.getElementById('cpTotal').textContent = '$' + total.toFixed(2);
+ 
+    /* toggle empty state */
+    const empty  = document.getElementById('cpEmpty');
+    const footer = document.getElementById('cpFooter');
+    const itemsEl = document.getElementById('cpItems');
+    if (count === 0) {
+      itemsEl.style.display = 'none';
+      empty.style.display = 'flex';
+      footer.style.display = 'none';
+    } else {
+      itemsEl.style.display = '';
+      empty.style.display = 'none';
+      footer.style.display = '';
+    }
+  }
+ 
+  /* init after DOM ready */
+  document.addEventListener('DOMContentLoaded', bindTriggers);
+  /* also bind immediately in case DOMContentLoaded already fired */
+  bindTriggers();
+})();
+// add to cart js
 // footer js starts
 // Intersection Observer for scroll-triggered animations
   const observer = new IntersectionObserver((entries) => {

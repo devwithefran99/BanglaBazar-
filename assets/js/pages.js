@@ -182,4 +182,23 @@ async function sendQ(preset){
 
 // userdashboard js ends
 
+// billing js starts
+/* Payment method highlight */
+  document.querySelectorAll('#blPayGroup input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('#blPayGroup .bl-radio-option').forEach(opt => opt.classList.remove('selected'));
+      radio.closest('.bl-radio-option').classList.add('selected');
+    });
+  });
+ 
+  /* Ship to different address toggle (optional: show/hide extra fields) */
+  document.getElementById('blShipDiff').addEventListener('change', function () {
+    /* extend: show a secondary address form here */
+  });
+ 
+  function placeOrder() {
+    alert('Order Placed! 🎉');
+  }
+// billing js ends
+
 

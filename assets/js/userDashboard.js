@@ -41,27 +41,16 @@ document.querySelectorAll('.mobile-toggle').forEach(item => {
 
 // userDashboard js starts
 // Toggle Sidebar for Mobile
-   function editProfile() {
-        alert('Profile Edit - Coming Soon 🔥');
-    }
-
-    function editAddress() {
-        alert('Address Updated!');
-    }
-
-    function viewAllOrders() {
-        alert('All Orders Page');
-    }
-
-    // Offcanvas auto close logic (optional, Bootstrap নিজেই ভালো কাজ করে)
-    const offcanvasEl = document.getElementById('dashboardSidebar');
-    const offcanvas = new bootstrap.Offcanvas(offcanvasEl);
-
-    // Main content এ ক্লিক করলে mobile এ offcanvas বন্ধ হয়ে যাবে
-    document.querySelector('.flex-grow-1').addEventListener('click', () => {
-        if (window.innerWidth < 768) {
-            offcanvas.hide();
-        }
-    });
+  /* Dynamic greeting — safe to add inside userDashboard.js too */
+        (function () {
+            const h = new Date().getHours();
+            const text = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
+            const el = document.getElementById('udbGreeting');
+            if (el) el.innerHTML = text + ', Erfan ✦';
+        })();
+ 
+        function editProfile()  { alert('Edit Profile — Coming Soon 🔥'); }
+        function editAddress()  { alert('Address Updated!'); }
+        function viewAllOrders(){ alert('All Orders Page'); }
 // userDashboard js ends
 
